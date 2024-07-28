@@ -3,7 +3,7 @@
 import React, { Fragment, useCallback, useEffect, useRef, useState } from 'react'
 import qs from 'qs'
 
-import { Category, Product } from '../../../payload/payload-types'
+import { Product } from '../../../payload/payload-types'
 import type { ArchiveBlockProps } from '../../_blocks/ArchiveBlock/types'
 import { useFilter } from '../../_providers/Filter'
 import { Card } from '../Card'
