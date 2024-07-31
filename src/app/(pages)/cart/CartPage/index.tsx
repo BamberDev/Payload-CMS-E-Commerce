@@ -27,7 +27,7 @@ export const CartPage: React.FC<{
     <Fragment>
       <br />
       {!hasInitializedCart ? (
-        <div className={classes.loading}>
+        <div>
           <LoadingShimmer />
         </div>
       ) : (
