@@ -3,5 +3,7 @@
 .actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  margin-top: var(--base);
   gap: calc(var(--base) / 2);
 }
