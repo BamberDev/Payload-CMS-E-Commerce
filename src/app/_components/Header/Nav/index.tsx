@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { Header as HeaderType } from '../../../../payload/payload-types'
@@ -22,6 +23,12 @@ export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
       })}
       <CartLink />
       {user && <Link href="/account">Account</Link>}
+      {user && (
+        <Link href="/logout" className={classes.logout}>
+          <Image src="assets/icons/logout.svg" alt="logout button" width={24} height={24} />
+          <p>Logout</p>
+        </Link>
+      )}
       {!user && (
         <Button
           el="link"
@@ -33,7 +40,6 @@ export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
           }}
         />
       )}
-      {user && <CartLink />}
     </nav>
   )
 }
