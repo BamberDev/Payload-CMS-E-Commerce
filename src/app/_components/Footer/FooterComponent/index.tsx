@@ -11,7 +11,7 @@ import { Gutter } from '../../Gutter'
 
 import classes from './index.module.scss'
 
-const FooterComponent = ({ footer }: { footer: Footer }) => {
+const FooterComponent = ({ footer }: { footer?: Footer }) => {
   const pathname = usePathname()
 
   const navItems = footer?.navItems || []
@@ -44,9 +44,7 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
             </Link>
 
             <p>
-              {footer.copyright
-                ? footer.copyright
-                : `&copy; ${new Date().getFullYear()} All rights reserved`}
+              {`Copyright © ${new Date().getFullYear()} | ${footer?.copyright || 'Company Name'}`}
             </p>
 
             <div className={classes.socialLinks}>
